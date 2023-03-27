@@ -31,12 +31,9 @@ class PostsRepositoryTest {
 
         // when
         List<Posts> postsList = postsRepository.findAll();
-
-        System.out.println("postsList.size() = " + postsList.size());
         // then
         Posts posts = postsList.get(0);
-        
-        System.out.println("posts.getId() = " + posts.getId());
+
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
 
