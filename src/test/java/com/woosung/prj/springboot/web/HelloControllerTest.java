@@ -18,7 +18,6 @@ class HelloControllerTest {
 
     @Autowired private MockMvc mvc;
     @MockBean private PostsService postsService;
-    @MockBean private JpaMetamodelMappingContext jpaMetamodelMappingContext;
 
     @Test
     public void hello가_리턴() throws Exception {
