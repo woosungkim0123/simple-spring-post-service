@@ -66,10 +66,8 @@ class PostsApiControllerTest {
                 .content("content")
                 .author("author")
                 .build());
-        System.out.println("savedPosts = " + savedPosts);
 
         Long updateId = savedPosts.getId();
-        System.out.println("updateId = " + updateId);
 
         String expectedTitle = "title2";
         String expectedContent = "content2";
