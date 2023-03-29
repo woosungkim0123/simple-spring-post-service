@@ -1,5 +1,6 @@
 package com.woosung.prj.springboot.web;
 
+import com.woosung.prj.springboot.config.auth.LoginUser;
 import com.woosung.prj.springboot.config.auth.dto.SessionUser;
 import com.woosung.prj.springboot.service.PostsService;
 import com.woosung.prj.springboot.web.dto.PostsResponseDto;
@@ -20,9 +21,8 @@ public class IndexController {
 
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if(user != null) {
             model.addAttribute("userName", user.getName());
         }
