@@ -7,11 +7,13 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.jpa.mapping.JpaMetamodelMappingContext;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.Matchers.is;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 
 @WebMvcTest
 class HelloControllerTest {
@@ -20,6 +22,7 @@ class HelloControllerTest {
     @MockBean private PostsService postsService;
 
     @Test
+    @WithMockUser(roles = "USER")
     public void hello가_리턴() throws Exception {
         String hello = "hello";
 
@@ -30,6 +33,7 @@ class HelloControllerTest {
 
 
     @Test
+    @WithMockUser(roles = "USER")
     public void helloDto_리턴() throws Exception {
         String name = "hello";
         int amount = 1000;
