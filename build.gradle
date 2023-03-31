@@ -11,9 +11,8 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-
 jar {
-    enabled = false
+    enabled(false)
 }
 
 dependencies {
