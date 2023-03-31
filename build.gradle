@@ -12,10 +12,16 @@ repositories {
     mavenCentral()
 }
 
-jar {
-    enabled = false
+bootJar {
+    enabled = true
+    archiveFileName = "${rootProject.name}.jar"
+    archiveVersion = ''
+    archiveClassifier = ''
+    mainClassName = 'com.woosung.prj.Application'
+    zip64 = true
+    duplicateClassesStrategy = 'warn'
+    excludeDevtools = false
 }
-
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
