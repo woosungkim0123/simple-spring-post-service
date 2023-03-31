@@ -12,7 +12,7 @@ repositories {
     mavenCentral()
 }
 
-bootJar {
+jar {
     enabled = false
 }
 
