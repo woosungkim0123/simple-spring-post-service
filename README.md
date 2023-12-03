@@ -43,4 +43,4 @@ sh start.sh
 
 | <center>스프링부트와 AWS로 <br/>혼자 구현하는 웹 서비스</center> |
 |-------------------------------------------------|
-| <center>![스프링부트와 AWS로 혼자 구현하는 웹 서비스](/docs/readme1.jpg)</center> | 
+| <p align="center"><img src="/docs/readme1.jpg" alt="스프링부트와 AWS로 혼자 구현하는 웹 서비스"/></p> | 
