@@ -1,4 +1,4 @@
-# Simple Post Service
+# Simple Spring Post Service
 
 ## Description
 
